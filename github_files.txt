@@ -1,0 +1,99 @@
+ Volume in drive D is Data
+ Volume Serial Number is 3A85-F77C
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github
+
+15-Sep-26  16:35    <DIR>          .
+17-Sep-26  11:50    <DIR>          ..
+15-Sep-26  16:35    <DIR>          skills
+               0 File(s)              0 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+15-Sep-26  16:35    <DIR>          speckit-analyze
+15-Sep-26  16:35    <DIR>          speckit-checklist
+15-Sep-26  16:35    <DIR>          speckit-clarify
+15-Sep-26  16:35    <DIR>          speckit-constitution
+15-Sep-26  16:35    <DIR>          speckit-converge
+15-Sep-26  16:35    <DIR>          speckit-implement
+15-Sep-26  16:35    <DIR>          speckit-plan
+15-Sep-26  16:35    <DIR>          speckit-specify
+15-Sep-26  16:35    <DIR>          speckit-tasks
+15-Sep-26  16:35    <DIR>          speckit-taskstoissues
+               0 File(s)              0 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-analyze
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            12,035 SKILL.md
+               1 File(s)         12,035 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-checklist
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            22,657 SKILL.md
+               1 File(s)         22,657 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-clarify
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            19,707 SKILL.md
+               1 File(s)         19,707 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-constitution
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            10,520 SKILL.md
+               1 File(s)         10,520 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-converge
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            13,032 SKILL.md
+               1 File(s)         13,032 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-implement
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            13,083 SKILL.md
+               1 File(s)         13,083 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-plan
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29             8,239 SKILL.md
+               1 File(s)          8,239 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-specify
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            18,638 SKILL.md
+               1 File(s)         18,638 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-tasks
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29            11,582 SKILL.md
+               1 File(s)         11,582 bytes
+
+ Directory of D:\DEV\TrainingProjects\RSSFeedReader\.github\skills\speckit-taskstoissues
+
+15-Sep-26  16:35    <DIR>          .
+15-Sep-26  16:35    <DIR>          ..
+17-Sep-26  11:29             8,066 SKILL.md
+               1 File(s)          8,066 bytes
+
+     Total Files Listed:
+              10 File(s)        137,559 bytes
+              35 Dir(s)  110,925,582,336 bytes free
