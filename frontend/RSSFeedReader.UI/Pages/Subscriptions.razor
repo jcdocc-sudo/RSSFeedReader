@@ -29,7 +29,24 @@ else
     <ul class="list-group">
         @foreach (var subscription in subscriptions)
         {
-            <li class="list-group-item">@subscription.Url</li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>@subscription.Url</span>
+                    <button class="btn btn-sm btn-outline-primary" @onclick="() => RefreshSubscriptionAsync(subscription.Url)">Refresh</button>
+                </div>
+
+                @if (selectedFeedUrl == subscription.Url && feedItems.Count > 0)
+                {
+                    <ul class="mt-3 mb-0 ps-3">
+                        @foreach (var item in feedItems)
+                        {
+                            <li>
+                                <a href="@item.Link" target="_blank" rel="noopener noreferrer">@item.Title</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
         }
     </ul>
 }
@@ -37,7 +54,9 @@ else
 @code {
     private string feedUrl = string.Empty;
     private string statusMessage = string.Empty;
+    private string selectedFeedUrl = string.Empty;
     private List<Subscription> subscriptions = new();
+    private List<FeedItem> feedItems = new();
 
     protected override async Task OnInitializedAsync()
     {
@@ -68,6 +87,21 @@ else
         else
         {
             statusMessage = "Unable to add subscription.";
+        }
+    }
+
+    private async Task RefreshSubscriptionAsync(string url)
+    {
+        selectedFeedUrl = url;
+        feedItems = await SubscriptionApiClient.GetFeedItemsAsync(url);
+
+        if (feedItems.Count == 0)
+        {
+            statusMessage = "Failed to load feed.";
+        }
+        else
+        {
+            statusMessage = $"Updated: {url}";
         }
     }
 }

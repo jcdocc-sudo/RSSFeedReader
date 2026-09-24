@@ -24,4 +24,17 @@ public class SubscriptionApiClient
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadFromJsonAsync<Subscription>();
     }
+
+    public async Task<List<FeedItem>> GetFeedItemsAsync(string url)
+    {
+        var response = await _httpClient.GetAsync($"subscriptions/feed-items?url={Uri.EscapeDataString(url)}");
+
+        if (!response.IsSuccessStatusCode)
+        {
+            return new List<FeedItem>();
+        }
+
+        var items = await response.Content.ReadFromJsonAsync<List<FeedItem>>();
+        return items ?? new List<FeedItem>();
+    }
 }

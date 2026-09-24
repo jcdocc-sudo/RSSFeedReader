@@ -17,6 +17,10 @@ Test in browser:
 ================
 http://localhost:5282
 
+Example de flux RSS:
+- https://devblogs.microsoft.com/dotnet/feed/
+- https://devblogs.microsoft.com/visualstudio/feed/
+
 
 -----------------------------------
 
