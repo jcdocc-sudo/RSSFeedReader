@@ -1,0 +1,73 @@
+@page "/"
+@using RSSFeedReader.UI.Models
+@using RSSFeedReader.UI.Services
+@inject SubscriptionApiClient SubscriptionApiClient
+
+<PageTitle>Subscriptions</PageTitle>
+
+<h1>Subscriptions</h1>
+
+<div class="mb-3">
+    <label class="form-label" for="feedUrl">Feed URL</label>
+    <div class="input-group">
+        <input id="feedUrl" class="form-control" @bind="feedUrl" placeholder="https://example.com/feed.xml" />
+        <button class="btn btn-primary" @onclick="AddSubscriptionAsync">Add</button>
+    </div>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(statusMessage))
+{
+    <div class="alert alert-info">@statusMessage</div>
+}
+
+@if (subscriptions.Count == 0)
+{
+    <p>No subscriptions yet.</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var subscription in subscriptions)
+        {
+            <li class="list-group-item">@subscription.Url</li>
+        }
+    </ul>
+}
+
+@code {
+    private string feedUrl = string.Empty;
+    private string statusMessage = string.Empty;
+    private List<Subscription> subscriptions = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadSubscriptionsAsync();
+    }
+
+    private async Task LoadSubscriptionsAsync()
+    {
+        subscriptions = await SubscriptionApiClient.GetSubscriptionsAsync();
+    }
+
+    private async Task AddSubscriptionAsync()
+    {
+        if (string.IsNullOrWhiteSpace(feedUrl))
+        {
+            statusMessage = "Please enter a subscription URL.";
+            return;
+        }
+
+        var result = await SubscriptionApiClient.AddSubscriptionAsync(feedUrl);
+
+        if (result is not null)
+        {
+            statusMessage = $"Added: {result.Url}";
+            feedUrl = string.Empty;
+            await LoadSubscriptionsAsync();
+        }
+        else
+        {
+            statusMessage = "Unable to add subscription.";
+        }
+    }
+}

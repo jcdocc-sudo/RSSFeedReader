@@ -1,0 +1,31 @@
+Backend:
+========
+cd "d:\DEV\TrainingProjects\RSSFeedReader"
+dotnet run --project backend/RSSFeedReader.Api/RSSFeedReader.Api.csproj
+
+-> Now listening on: http://localhost:5052
+
+Frontend:
+=========
+cd "d:\DEV\TrainingProjects\RSSFeedReader"
+dotnet run --project frontend/RSSFeedReader.UI/RSSFeedReader.UI.csproj
+
+-> Now listening on: http://localhost:5282
+
+
+Test in browser:
+================
+http://localhost:5282
+
+
+-----------------------------------
+
+If you want to test the API directly, you can also call the backend from a terminal:
+ $ Invoke-RestMethod -Uri "http://localhost:5052/api/subscriptions" -Method Get
+
+And add a subscription:
+ $ $body = @{ url = "https://example.com/feed.xml" } | ConvertTo-Json
+Invoke-RestMethod -Uri "http://localhost:5052/api/subscriptions" -Method Post -ContentType "application/json" -Body $body
+
+
+
